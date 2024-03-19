@@ -24,8 +24,7 @@ void RoundRobin(Processo processos[], int n) {
     // Loop principal que executa até todos os processos serem concluídos
     do {
         count = 0; // Inicializa o contador de processos concluídos
-
-        // Itera sobre todos os processos
+        
         for (i = 0; i < n; i++) {
             // Verifica se o processo ainda tem tempo de execução restante
             if (processos[i].tempo_execucao > 0) {
@@ -59,8 +58,8 @@ void RoundRobin(Processo processos[], int n) {
     
     float tempo_medio_retorno = static_cast<float>(total_turnaround_time) / n;
     float tempo_medio_espera = static_cast<float>(total_waiting_time) / n;
-        cout << "" << endl;
-
+        
+    cout << "" << endl;
     cout << "Tempo medio de retorno: " << tempo_medio_retorno << " unidades de tempo." << endl;
     cout << "Tempo medio de espera: " << tempo_medio_espera << " unidades de tempo." << endl;
 }
